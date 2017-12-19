@@ -21,17 +21,17 @@ html, body {
 	width: 15vw;
     text-decoration: none;
 }
-#skills li a:hover {
-    background-color: #111;
+.mercuryLink {
+	background-color: #e39e1c;
 }
-#mercuryLink {
-	background-color: #ad631d;
+.mercuryLink:hover {
+	background-color: black;
 }
 #earthLink {
 	background-color: #2d7ddc;
 }
 #marsLink {
-	background-color: #91513b;
+	background-color: #c1440e;
 }
 .stars {
   background-color: black;
@@ -68,62 +68,82 @@ html, body {
     height: 10vmin;
 	
 }
-#marsClick {
+#marsArea {
     height : 4vmin;
     width : 4vmin;
 	position: absolute;
 	animation: rotMars 40s linear infinite;
 }
 #mars {
-    background-color : #91513b;
-    border-radius : 50px;
+    background-color : #c1440e;
+    border-radius : 100%;
     height : 2.1vmin;
     width : 2.1vmin;
 }
-#marsClick:hover {
+#marsArea:hover {
 	animation-play-state: paused;
 }
-#mercuryClick {
+#mercuryArea {
     height : 4vmin;
     width : 4vmin;
 	position: absolute;
 	animation: rotMercury 16s linear infinite;
 }
 #mercury {
-	background-color: #ad631d;
-    border-radius : 50px;
+	background-color: #e39e1c;
+    border-radius : 100%;
     height : 3.7vmin;
     width : 3.7vmin;
 }
-#mercuryClick:hover {
+#mercuryArea:hover {
 	animation-play-state: paused;
 }
-#earthClick {
-    border-radius : 50px;
+#earthContainer {
+    border-radius : 100%;
     height : 5vmin;
     width : 5vmin;
-	position: absolute;
 	animation: rotEarth 25s linear infinite;
+}
+#earthArea {
+    border-radius : 100%;
+    height : 5vmin;
+    width : 5vmin;
 }
 #earth {
     background-color: #2d7ddc;
-    border-radius: 50px;
+    border-radius: 100%;
     height: 4vmin;
     width: 4vmin;
 }
-#earthClick:hover {
+#earthContainer:hover {
 	animation-play-state: paused;
+}
+#earthArea:hover #earth {
+	transform: scale(1.2);
+	transition-duration: 100ms;
+}
+#moonArea {
+    border-radius : 100%;
+    height : 2.5vmin;
+    width : 2.5vmin;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	animation: rotMoon 5s linear infinite;
 }
 #moon {
     background-color : #b2b2b2;
-    border-radius : 50px;
+    border-radius : 100%;
     height : 1vmin;
     width : 1vmin;
-    position : absolute;
-	animation: rotMoon 5s linear infinite;
+	transform: translate(-50%, -50%);
 }
-#moon:hover {
+#moonArea:hover {
 	animation-play-state: paused;
+}
+#moonArea:hover #moon{
+	transform: scale(1.5);
+	transition-duration: 100ms;
 }
 @keyframes rotMercury {
 	from {
