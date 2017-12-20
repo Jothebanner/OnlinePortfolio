@@ -4,33 +4,40 @@
 <head>
 <link rel="stylesheet" href="MySite.css">
 <title>Jacob Hawks</title>
-<script type="text/javascript" src="script.js"></script>
+<script type="text/javascript" src="script.js">
+</script>
 </head>
-<body>
+<body onload="setPopupPos(mercuryArea, mercury);setPopupPos(earthContainer, earth);setPopupPos(marsArea, mars);">
 	<div class="stars">
 	</div>
 	
 	<div id="sun" class="center">
 		<div id="mercuryArea" class="center">
-			<div id="mercury" class="center"></div>
+			<div id="mercury" class="center">
+				<p class="Popup centerPlanets">C#</p>
+			</div>
 		</div>
-		<div id="earthContainer">
+		<div id="earthContainer" class="center">
 			<div id="earthArea" class="center">
-				<div id="earth" class="center"></div>
+				<div id="earth" class="center">
+					<p class="Popup centerPlanets">Java</p>
+				</div>
 			</div>
 			<div id="moonArea">
 				<div id="moon"></div>
 			</div>
 		</div>
 		<div id="marsArea" class="center">
-			<div id="mars" class="center"></div>
+			<div id="mars" class="center">
+				<p class="Popup">HTML & CSS</p>
+			</div>
 		</div>
 	</div>
 	<nav id="skills">
 		<ul>
-			<li><a class="mercuryLink" href="">C#</a></li>
-			<li><a id="earthLink" href="">Java</a></li>
-			<li><a id="marsLink" href="">HTML & CSS</a></li>
+			<li><a onmouseover="showPopup(mercuryArea, mercury)" onmouseleave="hidePopup(mercuryArea, mercury)" id="mercuryLink" href="">C#</a></li>
+			<li><a onmouseover="showPopup(earthContainer, earth)" onmouseleave="hidePopup(earthContainer, earth)" id="earthLink" href="">Java</a></li>
+			<li><a onmouseover="showPopup(marsArea, mars)" onmouseleave="hidePopup(marsArea, mars)" id="marsLink" href="">HTML & CSS</a></li>
 		</ul>
 	</nav>
 </body>

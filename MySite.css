@@ -1,4 +1,5 @@
 html, body {
+	font-family: "Courier New";
 }
 #skills ul {
 	position: fixed;
@@ -21,11 +22,8 @@ html, body {
 	width: 15vw;
     text-decoration: none;
 }
-.mercuryLink {
+#mercuryLink {
 	background-color: #e39e1c;
-}
-.mercuryLink:hover {
-	background-color: black;
 }
 #earthLink {
 	background-color: #2d7ddc;
@@ -60,6 +58,18 @@ html, body {
 	left:0;
 	right:0;
 }
+
+.Popup {
+	background-color: white;
+	padding: 5%;
+	font-size: 2vmin;
+	width: max-content;
+	position: absolute;
+	top: 4vmin;
+	text-align: center;
+	visibility: hidden;
+	z-index: 100;
+}
 #sun {
     background-color : #ba8f27;
     border-radius : 50%;
@@ -81,7 +91,10 @@ html, body {
     width : 2.1vmin;
 }
 #marsArea:hover {
-	animation-play-state: paused;
+	animation-play-state: paused !important;
+}
+#marsArea:hover .Popup {
+	visibility: visible !important;
 }
 #mercuryArea {
     height : 4vmin;
@@ -96,7 +109,10 @@ html, body {
     width : 3.7vmin;
 }
 #mercuryArea:hover {
-	animation-play-state: paused;
+	animation-play-state: paused !important;
+}
+#mercuryArea:hover .Popup {
+	visibility: visible !important;
 }
 #earthContainer {
     border-radius : 100%;
@@ -116,11 +132,14 @@ html, body {
     width: 4vmin;
 }
 #earthContainer:hover {
-	animation-play-state: paused;
+	animation-play-state: paused !important;
 }
 #earthArea:hover #earth {
 	transform: scale(1.2);
 	transition-duration: 100ms;
+}
+#earthArea:hover .Popup {
+	visibility: visible !important;
 }
 #moonArea {
     border-radius : 100%;
@@ -137,6 +156,7 @@ html, body {
     height : 1vmin;
     width : 1vmin;
 	transform: translate(-50%, -50%);
+	z-index: 10000;
 }
 #moonArea:hover {
 	animation-play-state: paused;
