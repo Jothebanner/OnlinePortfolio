@@ -7,40 +7,6 @@
 </script>
 </head>
 <body>
-	<div id="SkillsIndex" onresize="setPopupPos(mercuryArea, mercury);setPopupPos(earthContainer, earth);setPopupPos(marsArea, mars);" onload="setPopupPos(mercuryArea, mercury);setPopupPos(earthContainer, earth);setPopupPos(marsArea, mars);" >
-	<div class="stars">
-	</div>
-	
-	<div id="sun" class="center">
-		<div onmouseover="growPlanet(mercury);" onmouseleave="shrinkPlanet(mercury);" id="mercuryArea" class="center">
-			<div id="mercury" class="center">
-				<p class="Popup centerPlanets">C#</p>
-			</div>
-		</div>
-		<div id="earthContainer" class="center">
-			<div onmouseover="growPlanet(earth);" onmouseleave="shrinkPlanet(earth);" id="earthArea" class="center">
-				<div id="earth" class="center">
-					<p class="Popup centerPlanets">Java</p>
-				</div>
-			</div>
-			<div id="moonArea">
-				<div id="moon"></div>
-			</div>
-		</div>
-		<div onmouseover="growPlanet(mars);" onmouseleave="shrinkPlanet(mars);" id="marsArea" class="center">
-			<div id="mars" class="center">
-				<p class="Popup">HTML & CSS</p>
-			</div>
-		</div>
-	</div>
-	<nav id="skills">
-		<ul>
-			<li><a onmouseover="showPopup(mercuryArea, mercury);growPlanet(mercury);" onmouseleave="hidePopup(mercuryArea, mercury);shrinkPlanet(mercury);" id="mercuryLink" href="">C#</a></li>
-			<li><a onmouseover="showPopup(earthContainer, earth); growPlanet(earth);" onmouseleave="hidePopup(earthContainer, earth); shrinkPlanet(earth);" id="earthLink" href="">Java</a></li>
-			<li><a onmouseover="showPopup(marsArea, mars);growPlanet(mars);" onmouseleave="hidePopup(marsArea, mars);shrinkPlanet(mars);" id="marsLink" href="">HTML & CSS</a></li>
-		</ul>
-	</nav>
-	</div>
 	<header id="headerWrapper">
 	<a href="Index.html" id="siteTitle" class="skillsTitle">Jacob Hawks</a>
 	<nav class="Navi" id="navSkills">
@@ -52,6 +18,53 @@
 		</ul>
 	</nav>
 	</header>
+	<div class="stars">
+	<div id="SkillsIndex" onresize="setPopupPos(mercuryArea, mercury);setPopupPos(earthContainer, earth);setPopupPos(marsArea, mars);" onload="setPopupPos(mercuryArea, mercury);setPopupPos(earthContainer, earth);setPopupPos(marsArea, mars);" >
+	</div>
+	
+	<div id="sun" class="center">
+		<div onmouseover="growPlanet(mercury);" onmouseleave="shrinkPlanet(mercury);" id="mercuryArea" class="center">
+			<div id="mercury" class="center" onclick="changeDiv(SkillsIndex, CSharp)">
+				<p class="Popup centerPlanets">C#</p>
+			</div>
+		</div>
+		<div id="earthContainer" class="center">
+			<div onmouseover="growPlanet(earth);" onmouseleave="shrinkPlanet(earth);" id="earthArea" class="center">
+				<div id="earth" class="center" onclick="changeDiv(SkillsIndex, Java)">
+					<p class="Popup centerPlanets">Java</p>
+				</div>
+			</div>
+			<div id="moonArea">
+				<div id="moon"></div>
+			</div>
+		</div>
+		<div onmouseover="growPlanet(mars);" onmouseleave="shrinkPlanet(mars);" id="marsArea" class="center">
+			<div id="mars" class="center" onclick="changeDiv(SkillsIndex, HTMLCSS)">
+				<p class="Popup">HTML & CSS</p>
+			</div>
+		</div>
+	</div>
+	<nav id="skills">
+		<ul>
+			<li><a onclick="changeDiv(SkillsIndex, CSharp)" onmouseover="showPopup(mercuryArea, mercury);growPlanet(mercury);" onmouseleave="hidePopup(mercuryArea, mercury);shrinkPlanet(mercury);" id="mercuryLink">C#</a></li>
+			<li><a onclick="changeDiv(SkillsIndex, Java)" onmouseover="showPopup(earthContainer, earth); growPlanet(earth); " onmouseleave="hidePopup(earthContainer, earth); shrinkPlanet(earth);" id="earthLink">Java</a></li>
+			<li><a onclick="changeDiv(SkillsIndex, HTMLCSS)" onmouseover="showPopup(marsArea, mars);growPlanet(mars);" onmouseleave="hidePopup(marsArea, mars);shrinkPlanet(mars);" id="marsLink">HTML & CSS</a></li>
+		</ul>
+	</nav>
+	</div>
+	
+	<div id="CSharp" style="display: none">
+	<button onclick="changeDiv(CSharp, SkillsIndex)">Back</button>
+	</div>
+	
+	<div id="Java" style="display: none">
+	<button onclick="changeDiv(Java, SkillsIndex)">Back</button>
+	</div>
+	
+	<div id="HTMLCSS" style="display: none">
+	<button onclick="changeDiv(HTMLCSS, SkillsIndex)">Back</button>
+	</div>
+	
 </body>
 
 </html>

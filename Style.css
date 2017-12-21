@@ -1,7 +1,9 @@
 html, body {
 	font-family: "Courier New";
+	-webkit-font-smoothing: antialiased;
 	overflow: hidden;
 	margin: 0%;
+	letter-spacing: .15vw;
 }
 #skills ul {
 	position: fixed;
@@ -24,24 +26,31 @@ html, body {
 	width: 15vw;
     text-decoration: none;
 }
+#skills li:hover {
+    cursor: pointer;
+}
 #skills li a:hover {
 	background-color: green;
 }
 #headerWrapper {
-	width: 100%;
-}
-.skillsTitle {
-	color: gray;
+    padding: 7px 0;
+	padding-left: 1.5vw;
+	width: 96vw;
 }
 #siteTitle {
+	text-decoration: none;
     list-style-type: none;
     padding: 7px 16px;
 	position: absolute;
 	z-index:1;
-    list-style-type: none;
+	font-size: 3vmin;
+	font-family: "calluna-sans",Helvetica,Helvetica Neue,Arial;
+	color: lightgray;
+}
+.skillsTitle {
+	color: gray !important;
 }
 .Navi ul {
-	position: fixed;
 	right: 0;
 	top: 0;
     list-style-type: none;
@@ -54,6 +63,7 @@ html, body {
     float: right;
 }
 .Navi li a {
+	font-weight: bold;
     border-radius : 5px;
     display: block;
     color: black;
@@ -63,7 +73,7 @@ html, body {
 	border-right: groove;
 }
 .Navi li a:hover {
-	color: white;
+	color: grey;
 }
 #navSkills li a {
 	color: gray;
@@ -145,8 +155,8 @@ html, body {
 	visibility: visible !important;
 }
 #mercuryArea {
-    height : 4vmin;
-    width : 4vmin;
+    height : 4.5vmin;
+    width : 4.5vmin;
 	position: absolute;
 	animation: rotMercury 16s linear infinite;
 }
@@ -402,9 +412,6 @@ html, body {
 	}
 }
 .IndexWrapper {
-	height: 100%;
-	width: 100%;
-	margin: 0%;
 }
 #name {
 	margin: auto;
@@ -420,10 +427,63 @@ html, body {
 }
 .borderTop {
 	border-top: groove;
-	width: 80vmin;
+	width: 85vmin;
 	font-family: Arial Black;
 	color: gray;
 }
 #jacob {
 	font-weight: bold;
 }
+#CSharp {
+	width: 100vw;
+	height: 100vh;
+	background-color: #e39e1c;
+}
+#Java {
+	width: 100vw;
+	height: 100vh;
+	background-color: #2d7ddc;
+}
+#HTMLCSS {
+	width: 100vw;
+	height: 100vh;
+	background-color: #c1440e;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+	font-family: monospace;
+	resize: none;
+	font-size: 1.5em;
+}
+#submitButton[type=submit] {
+    background-color: #00cc00;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+	font-family: monospace;
+	font-size: 1.5em;
+	width: 100%;
+	margin: auto;
+}
+#submitButton[type=submit]:hover {
+    background-color: #45a049;
+}
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+	width: 50%;
+	max-width: 50em;
+	margin: auto;
+	margin-top: 20vh;
+	
+	font-family: monospace !important;

@@ -32,4 +32,7 @@ function shrinkPlanet(planet) {
 	planet.style.transform = "scale(1)";
 	planet.style.transitionDuration = "100ms";
 }
-
+function changeDiv(div1, div2) {
+	document.getElementById(div1.id).style.display = "none";
+	document.getElementById(div2.id).style.display = "block";
+}
