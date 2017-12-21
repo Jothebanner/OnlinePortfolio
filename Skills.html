@@ -6,7 +6,8 @@
 <script type="text/javascript" src="script.js">
 </script>
 </head>
-<body onresize="setPopupPos(mercuryArea, mercury);setPopupPos(earthContainer, earth);setPopupPos(marsArea, mars);" onload="setPopupPos(mercuryArea, mercury);setPopupPos(earthContainer, earth);setPopupPos(marsArea, mars);">
+<body>
+	<div id="SkillsIndex" onresize="setPopupPos(mercuryArea, mercury);setPopupPos(earthContainer, earth);setPopupPos(marsArea, mars);" onload="setPopupPos(mercuryArea, mercury);setPopupPos(earthContainer, earth);setPopupPos(marsArea, mars);" >
 	<div class="stars">
 	</div>
 	
@@ -39,7 +40,10 @@
 			<li><a onmouseover="showPopup(marsArea, mars);growPlanet(mars);" onmouseleave="hidePopup(marsArea, mars);shrinkPlanet(mars);" id="marsLink" href="">HTML & CSS</a></li>
 		</ul>
 	</nav>
-	<nav id="Navi" id="navSkills">
+	</div>
+	<header id="headerWrapper">
+	<a href="Index.html" id="siteTitle" class="skillsTitle">Jacob Hawks</a>
+	<nav class="Navi" id="navSkills">
 		<ul>
 			<li><a id="lastNav" href="Contact.html">Contact</a></li>
 			<li><a href="AboutMe.html">About Me</a></li>
@@ -47,6 +51,7 @@
 			<li><a href="Index.html">Home</a></li>
 		</ul>
 	</nav>
+	</header>
 </body>
 
 </html>

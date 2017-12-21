@@ -1,6 +1,7 @@
 html, body {
 	font-family: "Courier New";
 	overflow: hidden;
+	margin: 0%;
 }
 #skills ul {
 	position: fixed;
@@ -26,23 +27,33 @@ html, body {
 #skills li a:hover {
 	background-color: green;
 }
-#Navi ul {
+#headerWrapper {
+	width: 100%;
+}
+.skillsTitle {
+	color: gray;
+}
+#siteTitle {
+    list-style-type: none;
+    padding: 7px 16px;
+	position: absolute;
+	z-index:1;
+    list-style-type: none;
+}
+.Navi ul {
 	position: fixed;
 	right: 0;
 	top: 0;
-	width: 100%;
-	background-color: grey;
-	background-color: rgba(128,128,128,0.4);
     list-style-type: none;
     margin: 0;
     padding: 0;
 	padding-right: 10px;
     overflow: hidden;
 }
-#Navi li {
+.Navi li {
     float: right;
 }
-#Navi li a {
+.Navi li a {
     border-radius : 5px;
     display: block;
     color: black;
@@ -51,11 +62,14 @@ html, body {
     text-decoration: none;
 	border-right: groove;
 }
-#Navi li a:hover {
+.Navi li a:hover {
 	color: white;
 }
-#navSkills {
-	color = 
+#navSkills li a {
+	color: gray;
+}
+#navSkills li a:hover {
+	color: white;
 }
 #mercuryLink {
 	background-color: #e39e1c;
@@ -76,10 +90,9 @@ html, body {
   width:100%;
   height:100%;
   animation: slideStars 2000s linear infinite;
-}
-.stars {
+  
   background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
-  z-index:0;
+  z-index:-1;
 }
 @keyframes slideStars {
     from { background-position: 0 0; }
@@ -391,6 +404,7 @@ html, body {
 .IndexWrapper {
 	height: 100%;
 	width: 100%;
+	margin: 0%;
 }
 #name {
 	margin: auto;
@@ -406,7 +420,7 @@ html, body {
 }
 .borderTop {
 	border-top: groove;
-	width: 80%;
+	width: 80vmin;
 	font-family: Arial Black;
 	color: gray;
 }
