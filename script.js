@@ -10,7 +10,6 @@ function hidePopup(planetName, planet) {
 	var popup = document.getElementById(planet.id).getElementsByClassName("Popup")[0];
 	popup.style.visibility = "hidden";
 }
-
 function setPopupPos(planetName, planet) {
 	var planet = document.getElementById(planet.id);
 	var popup = planet.getElementsByClassName("Popup")[0];
@@ -19,6 +18,18 @@ function setPopupPos(planetName, planet) {
 	}
 	else
 	{
+		popup.style.width = "max-content";
 		popup.style.left = "-" + ((popup.clientWidth - planet.clientWidth) / 2) + "px";
 	}
 }
+function growPlanet(planet) {
+	var planet = document.getElementById(planet.id);
+	planet.style.transform = "scale(1.2)";
+	planet.style.transitionDuration = "100ms";
+}
+function shrinkPlanet(planet) {
+	var planet = document.getElementById(planet.id);
+	planet.style.transform = "scale(1)";
+	planet.style.transitionDuration = "100ms";
+}
+
