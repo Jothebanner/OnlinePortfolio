@@ -45,7 +45,7 @@ html, body {
 	z-index:1;
 	font-size: 3vmin;
 	font-family: "calluna-sans",Helvetica,Helvetica Neue,Arial;
-	color: lightgray;
+	color: gray;
 }
 .skillsTitle {
 	color: gray !important;
@@ -102,7 +102,7 @@ html, body {
   animation: slideStars 2000s linear infinite;
   
   background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
-  z-index:-1;
+  z-index: -1;
 }
 @keyframes slideStars {
     from { background-position: 0 0; }
@@ -134,7 +134,6 @@ html, body {
     box-shadow : 0 0 5vmin red;
 	width: 10vmin;
     height: 10vmin;
-	
 }
 #marsArea {
     height : 4vmin;
@@ -411,7 +410,10 @@ html, body {
 		           rotate(-360deg);
 	}
 }
-.IndexWrapper {
+.indexWrapper {
+	width: 100vw;
+	height: 100vh;
+	background-image: url("Background5.jpg");
 }
 #name {
 	margin: auto;
@@ -427,7 +429,7 @@ html, body {
 }
 .borderTop {
 	border-top: groove;
-	width: 85vmin;
+	width: 90vmin;
 	font-family: Arial Black;
 	color: gray;
 }
@@ -435,21 +437,78 @@ html, body {
 	font-weight: bold;
 }
 #CSharp {
-	width: 100vw;
-	height: 100vh;
+	width: 60vw;
+	height: 60vh;
+	margin: auto;
+	margin-top: 15vh;
 	background-color: #e39e1c;
 }
 #Java {
-	width: 100vw;
-	height: 100vh;
+	width: 60vw;
+	height: 60vh;
+	margin: auto;
+	margin-top: 15vh;
 	background-color: #2d7ddc;
 }
 #HTMLCSS {
-	width: 100vw;
-	height: 100vh;
+	width: 60vw;
+	height: 60vh;
+	margin: auto;
+	margin-top: 15vh;
 	background-color: #c1440e;
 }
-
+.subdivWrapper {
+	padding: 20px;
+}
+.subdivText {
+	width: 60%;
+	margin: auto;
+	margin-top: 7vmin;
+	font-size: 3vmin;
+}
+.arrow {
+  border: solid black;
+  border-width: 0 10px 10px 0;
+  height: 15px;
+  width: 15px;
+  padding: 5px;
+  display: inline-block;
+  
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+.arrow:hover {
+	cursor: pointer;
+	border: solid white;
+	
+	border-width: 0 10px 10px 0;
+	height: 15px;
+	width: 15px;
+	padding: 5px;
+	display: inline-block;
+  
+	transform: rotate(135deg);
+	-webkit-transform: rotate(135deg);
+}
+#htmlPic {
+	width: 15vmin;
+	height: 12vmin;
+	padding-right: 20px;
+	padding-top: 20px;
+}
+#javaPic {
+	width: 12vmin;
+	height: 20vmin;
+	margin-right: 20px;
+	margin-top: 20px;
+	background-color: white;
+}
+#csharpPic {
+	width: 18vmin;
+	height: 12vmin;
+	margin-right: 20px;
+	margin-top: 20px;
+}
 input[type=text], select, textarea {
     width: 100%;
     padding: 12px;
@@ -492,19 +551,27 @@ input[type=text], select, textarea {
 	font-family: monospace;
 	resize: none;
 }
-#contactWrapper {
-	
+#contactFormWrapper {
     border-radius: 5px;
     padding: 20px;
 	width: 50%;
 	max-width: 50em;
 	margin: auto;
-	margin-top: 20vh;
+	margin-top: 5%;
 	font-family: monospace !important;
 }
+#contactWrapper {
+	height: 100vh;
+	width: 100vw;
+	background-image: url("Background3.jpg");
+}
+#meWrapper {
+	height: 100vh;
+	width: 100vw;
+	background-image: url("Background3.jpg");
+}
 .accordion {
-    background-color: #eee;
-    color: #444;
+    color: white;
     cursor: pointer;
     padding: 18px;
     width: 100%;
@@ -516,21 +583,43 @@ input[type=text], select, textarea {
 	text-align: center;
 }
 
-.active, .accordion:hover {
-    background-color: #ccc; 
-}
-
 .panel {
-    padding: 0 18px;
+    transition: 0.4s;
+	text-align: center;
+	font-size: 2vmin;
+	margin: auto;
+    padding: 18px 20%;
     display: none;
     background-color: white;
 }
+.panel p{
+	margin: 0;
+	color: white;
+}
 #development {
-	background-color: #f08130;
+	background-color: #00BFFF;
+}
+#development:hover {
+	background-color: #00ace6;
+}
+#panDev {
+	background-color: #00BFFF;
 }
 #professional {
-	background-color: #ecee18;
+	background-color: #ff4000;
+}
+#professional:hover {
+	background-color: #e63a00;
+}
+#panPro {
+	background-color: #ff4000;
 }
 #personal {
+	background-color: #81ee18;
+}
+#personal:hover {
+	background-color: #6fd510;
+}
+#panPer {
 	background-color: #81ee18;
 }
