@@ -37,7 +37,7 @@ html, body {
 	padding-left: 1.5vw;
 	width: 96vw;
 }
-#siteTitle {
+.siteTitle {
 	text-decoration: none;
     list-style-type: none;
     padding: 7px 16px;
@@ -47,8 +47,8 @@ html, body {
 	font-family: "calluna-sans",Helvetica,Helvetica Neue,Arial;
 	color: gray;
 }
-.skillsTitle {
-	color: gray !important;
+#skillsTitle {
+	color: gray;
 }
 .Navi ul {
 	right: 0;
@@ -199,8 +199,6 @@ html, body {
     height : 2.5vmin;
     width : 2.5vmin;
 	position: absolute;
-	top: 50%;
-	left: 50%;
 	animation: rotMoon 5s linear infinite;
 }
 #moon {
@@ -208,7 +206,6 @@ html, body {
     border-radius : 100%;
     height : 1vmin;
     width : 1vmin;
-	transform: translate(-50%, -50%);
 	z-index: 10000;
 }
 #moonArea:hover {
@@ -269,48 +266,48 @@ html, body {
 @keyframes rotEarth {
 	from {
 		transform: rotate(0deg)
-		           translate(30vmin)
+		           translate(-30vmin)
 		           rotate(0deg);
 	}
 	to {
 		transform: rotate(360deg)
-		           translate(30vmin) 
+		           translate(-30vmin) 
 		           rotate(-360deg);
 	}
 }
 @-webkit-keyframes rotEarth {
   from {
 		transform: rotate(0deg)
-		           translate(30vmin)
+		           translate(-30vmin)
 		           rotate(0deg);
 	}
 	to {
 		transform: rotate(360deg)
-		           translate(30vmin) 
+		           translate(-30vmin) 
 		           rotate(-360deg);
 	}
 }
 @-moz-keyframes rotEarth {
   from {
 		transform: rotate(0deg)
-		           translate(30vmin)
+		           translate(-30vmin)
 		           rotate(0deg);
 	}
 	to {
 		transform: rotate(360deg)
-		           translate(30vmin) 
+		           translate(-30vmin) 
 		           rotate(-360deg);
 	}
 }
 @-o-keyframes rotEarth {
   from {
 		transform: rotate(0deg)
-		           translate(30vmin)
+		           translate(-30vmin)
 		           rotate(0deg);
 	}
 	to {
 		transform: rotate(360deg)
-		           translate(30vmin) 
+		           translate(-30vmin) 
 		           rotate(-360deg);
 	}
 }
@@ -413,11 +410,13 @@ html, body {
 .indexWrapper {
 	width: 100vw;
 	height: 100vh;
-	background-image: url("Background5.jpg");
+	background-color: rgb(52, 152, 219);
+	background-size: cover;
+	
 }
 #name {
 	margin: auto;
-	margin-top: 36vh;
+	margin-top: 28vh;
 	text-align: center;
 	font-size: 7vmin;
 }
@@ -425,45 +424,59 @@ html, body {
 	margin: auto;
 	margin-bottom: 0%;
 	margin-top: 0%;
-	font-family: Georgia;
+	font-family: 'Roboto', sans-serif;
+	color: white;
 }
 .borderTop {
 	border-top: groove;
 	width: 90vmin;
 	font-family: Arial Black;
-	color: gray;
+	color: lightgray;
 }
 #jacob {
 	font-weight: bold;
 }
+#indexBottom {
+	backgroundcolor: #084ea3;
+	height: 100%;
+}
 #CSharp {
-	width: 60vw;
-	height: 60vh;
+	width: 80%;
+	height: 80%;
 	margin: auto;
 	margin-top: 15vh;
 	background-color: #e39e1c;
 }
 #Java {
-	width: 60vw;
-	height: 60vh;
+	width: 80%;
+	height: 80%;
 	margin: auto;
 	margin-top: 15vh;
 	background-color: #2d7ddc;
 }
 #HTMLCSS {
-	width: 60vw;
-	height: 60vh;
+	width: 80%;
+	height: 80%;
 	margin: auto;
 	margin-top: 15vh;
 	background-color: #c1440e;
 }
 .subdivWrapper {
-	padding: 20px;
+	width: 100%;
+	height: 100%;
+	padding: 2% 0%;
+}
+.subdivForeground {
+	height: 96%;
+	width: 96%;
+	margin: auto;
+	background-color: white;
 }
 .subdivText {
-	width: 60%;
+	width: 70%;
 	margin: auto;
-	margin-top: 7vmin;
+	margin-top: 0%;
+	margin-bottom: 10%;
 	font-size: 3vmin;
 }
 .arrow {
@@ -473,13 +486,15 @@ html, body {
   width: 15px;
   padding: 5px;
   display: inline-block;
+  margin-left: 10px;
+  margin-top: 10px;
   
   transform: rotate(135deg);
   -webkit-transform: rotate(135deg);
 }
 .arrow:hover {
 	cursor: pointer;
-	border: solid white;
+	border: solid grey;
 	
 	border-width: 0 10px 10px 0;
 	height: 15px;
@@ -493,21 +508,18 @@ html, body {
 #htmlPic {
 	width: 15vmin;
 	height: 12vmin;
-	padding-right: 20px;
-	padding-top: 20px;
+	padding-left: 10px;
 }
 #javaPic {
 	width: 12vmin;
 	height: 20vmin;
-	margin-right: 20px;
-	margin-top: 20px;
 	background-color: white;
+	padding-left: 10px;
 }
 #csharpPic {
 	width: 18vmin;
 	height: 12vmin;
-	margin-right: 20px;
-	margin-top: 20px;
+	padding-left: 10px;
 }
 input[type=text], select, textarea {
     width: 100%;
@@ -517,8 +529,8 @@ input[type=text], select, textarea {
     box-sizing: border-box;
     margin-top: 6px;
     margin-bottom: 16px;
-	font-family: monospace;
 	resize: none;
+	font-family: monospace;
 	font-size: 1.5em;
 }
 #submitButton[type=submit] {
@@ -544,31 +556,49 @@ input[type=text], select, textarea {
 	margin: auto;
 	font-family: monospace !important;
 }
-#contactTitle {
-	text-align: center;
-    box-sizing: border-box;
-    margin-top: 6px;
-	font-family: monospace;
-	resize: none;
-}
 #contactFormWrapper {
     border-radius: 5px;
     padding: 20px;
 	width: 50%;
 	max-width: 50em;
 	margin: auto;
-	margin-top: 5%;
+	margin-right: 5%;
+	margin-top: 3%;
 	font-family: monospace !important;
+	float: right;
 }
 #contactWrapper {
+	background-color: lightgreen;
 	height: 100vh;
 	width: 100vw;
-	background-image: url("Background3.jpg");
+}
+#contactLinks {
+	border-left: solid green;
+	border-top: solid green;
+	padding: 1.5%;
+	font-size: 2vw;
+	margin-left: 4%;
+	margin-top: 3%;
+	width: 30%;
+	float:left;
+}
+#contactTitle {
+	text-align: center;
+    box-sizing: border-box;
+	font-family: monospace;
+	resize: none;
+}
+#contactInfoWrapper {
+	margin-top: 3%;
+}
+.contactEmail {
+	margin-top: 5vh;
 }
 #meWrapper {
 	height: 100vh;
 	width: 100vw;
-	background-image: url("Background3.jpg");
+	overflow-y: scroll;
+	background-color: lightgrey;
 }
 .accordion {
     color: white;
@@ -586,7 +616,7 @@ input[type=text], select, textarea {
 .panel {
     transition: 0.4s;
 	text-align: center;
-	font-size: 2vmin;
+	font-size: 3vmin;
 	margin: auto;
     padding: 18px 20%;
     display: none;
