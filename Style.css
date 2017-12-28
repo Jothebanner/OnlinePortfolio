@@ -75,6 +75,251 @@ html, body {
 .Navi li a:hover {
 	color: grey;
 }
+.indexWrapper {
+	width: 100vw;
+	height: 100vh;
+	background-color: rgb(52, 152, 219);
+	background-size: cover;
+}
+#indexTitle {
+	color: lightgray;
+}
+#name {
+	margin: auto;
+	margin-top: 28vh;
+	text-align: center;
+	font-size: 7vmin;
+}
+.text {
+	margin: auto;
+	margin-bottom: 0%;
+	margin-top: 0%;
+	font-family: 'Roboto', sans-serif;
+	color: white;
+}
+.borderTop {
+	border-top: groove;
+	width: 90vmin;
+	font-family: Arial Black;
+	color: lightgray;
+}
+#jacob {
+	font-weight: bold;
+}
+#indexBottom {
+	backgroundcolor: #084ea3;
+	height: 100%;
+}
+#CSharp {
+	width: 80%;
+	height: 80%;
+	margin: auto;
+	margin-top: 15vh;
+	background-color: #e39e1c;
+}
+#Java {
+	width: 80%;
+	height: 80%;
+	margin: auto;
+	margin-top: 15vh;
+	background-color: #2d7ddc;
+}
+#HTMLCSS {
+	width: 80%;
+	height: 80%;
+	margin: auto;
+	margin-top: 15vh;
+	background-color: #c1440e;
+}
+.subdivWrapper {
+	width: 100%;
+	height: 100%;
+	padding: 2% 0%;
+}
+.subdivForeground {
+	height: 96%;
+	width: 96%;
+	margin: auto;
+	background-color: white;
+}
+.subdivText {
+	width: 70%;
+	margin: auto;
+	margin-top: 0%;
+	margin-bottom: 10%;
+	font-size: 3vmin;
+}
+.arrow {
+  border: solid black;
+  border-width: 0 10px 10px 0;
+  height: 15px;
+  width: 15px;
+  padding: 5px;
+  display: inline-block;
+  margin-left: 10px;
+  margin-top: 10px;
+  
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+.arrow:hover {
+	cursor: pointer;
+	border: solid grey;
+	
+	border-width: 0 10px 10px 0;
+	height: 15px;
+	width: 15px;
+	padding: 5px;
+	display: inline-block;
+  
+	transform: rotate(135deg);
+	-webkit-transform: rotate(135deg);
+}
+#htmlPic {
+	width: 15vmin;
+	height: 12vmin;
+	padding-left: 10px;
+}
+#javaPic {
+	width: 12vmin;
+	height: 20vmin;
+	background-color: white;
+	padding-left: 10px;
+}
+#csharpPic {
+	width: 18vmin;
+	height: 12vmin;
+	padding-left: 10px;
+}
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+	resize: none;
+	font-family: monospace;
+	font-size: 1.5em;
+}
+#submitButton[type=submit] {
+    background-color: #00cc00;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+	font-family: monospace;
+	font-size: 1.5em;
+	width: 100%;
+	margin: auto;
+}
+#submitButton[type=submit]:hover {
+    background-color: #45a049;
+}
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+	max-width: 50em;
+	margin: auto;
+	font-family: monospace !important;
+}
+#contactFormWrapper {
+    border-radius: 5px;
+    padding: 20px;
+	width: 50%;
+	max-width: 50em;
+	margin: auto;
+	font-family: monospace !important;
+	float: right;
+}
+#contactWrapper {
+	background-color: lightgreen;
+	height: 100vh;
+	width: 100vw;
+}
+#contactLinks {
+	border-left: solid green;
+	border-top: solid green;
+	padding: 1.5%;
+	font-size: 2vw;
+	width: 40%;
+	float:left;
+}
+#contactTitle {
+	text-align: center;
+    box-sizing: border-box;
+	font-family: monospace;
+	resize: none;
+	margin: 0;
+}
+#contactInfoWrapper {
+	margin-top: 3%;
+	width: 90%;
+	margin: auto;
+	margin-top: 4%;
+}
+#meWrapper {
+	height: 100vh;
+	width: 100vw;
+	overflow-y: scroll;
+	background-color: lightgray;
+}
+.accordion {
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 5vmin;
+    transition: 0.4s;
+	text-align: center;
+}
+
+.panel {
+    transition: 0.4s;
+	text-align: center;
+	font-size: 3vmin;
+	margin: auto;
+    padding: 18px 20%;
+    display: none;
+    background-color: white;
+}
+.panel p{
+	margin: 0;
+	color: white;
+}
+#development {
+	background-color: #00ace6;
+}
+#development:hover {
+	background-color: #009ace;
+}
+#panDev {
+	background-color: #00ace6;
+}
+#professional {
+	background-color: #ff4000;
+}
+#professional:hover {
+	background-color: #e63a00;
+}
+#panPro {
+	background-color: #ff4000;
+}
+#personal {
+	background-color: #6fd510;
+}
+#personal:hover {
+	background-color: #67c60d;
+}
+#panPer {
+	background-color: #6fd510;
+}
 #navSkills li a {
 	color: gray;
 }
@@ -406,250 +651,4 @@ html, body {
 		           translate(40vmin) 
 		           rotate(-360deg);
 	}
-}
-.indexWrapper {
-	width: 100vw;
-	height: 100vh;
-	background-color: rgb(52, 152, 219);
-	background-size: cover;
-	
-}
-#name {
-	margin: auto;
-	margin-top: 28vh;
-	text-align: center;
-	font-size: 7vmin;
-}
-.text {
-	margin: auto;
-	margin-bottom: 0%;
-	margin-top: 0%;
-	font-family: 'Roboto', sans-serif;
-	color: white;
-}
-.borderTop {
-	border-top: groove;
-	width: 90vmin;
-	font-family: Arial Black;
-	color: lightgray;
-}
-#jacob {
-	font-weight: bold;
-}
-#indexBottom {
-	backgroundcolor: #084ea3;
-	height: 100%;
-}
-#CSharp {
-	width: 80%;
-	height: 80%;
-	margin: auto;
-	margin-top: 15vh;
-	background-color: #e39e1c;
-}
-#Java {
-	width: 80%;
-	height: 80%;
-	margin: auto;
-	margin-top: 15vh;
-	background-color: #2d7ddc;
-}
-#HTMLCSS {
-	width: 80%;
-	height: 80%;
-	margin: auto;
-	margin-top: 15vh;
-	background-color: #c1440e;
-}
-.subdivWrapper {
-	width: 100%;
-	height: 100%;
-	padding: 2% 0%;
-}
-.subdivForeground {
-	height: 96%;
-	width: 96%;
-	margin: auto;
-	background-color: white;
-}
-.subdivText {
-	width: 70%;
-	margin: auto;
-	margin-top: 0%;
-	margin-bottom: 10%;
-	font-size: 3vmin;
-}
-.arrow {
-  border: solid black;
-  border-width: 0 10px 10px 0;
-  height: 15px;
-  width: 15px;
-  padding: 5px;
-  display: inline-block;
-  margin-left: 10px;
-  margin-top: 10px;
-  
-  transform: rotate(135deg);
-  -webkit-transform: rotate(135deg);
-}
-.arrow:hover {
-	cursor: pointer;
-	border: solid grey;
-	
-	border-width: 0 10px 10px 0;
-	height: 15px;
-	width: 15px;
-	padding: 5px;
-	display: inline-block;
-  
-	transform: rotate(135deg);
-	-webkit-transform: rotate(135deg);
-}
-#htmlPic {
-	width: 15vmin;
-	height: 12vmin;
-	padding-left: 10px;
-}
-#javaPic {
-	width: 12vmin;
-	height: 20vmin;
-	background-color: white;
-	padding-left: 10px;
-}
-#csharpPic {
-	width: 18vmin;
-	height: 12vmin;
-	padding-left: 10px;
-}
-input[type=text], select, textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-	resize: none;
-	font-family: monospace;
-	font-size: 1.5em;
-}
-#submitButton[type=submit] {
-    background-color: #00cc00;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-	font-family: monospace;
-	font-size: 1.5em;
-	width: 100%;
-	margin: auto;
-}
-#submitButton[type=submit]:hover {
-    background-color: #45a049;
-}
-.container {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
-	max-width: 50em;
-	margin: auto;
-	font-family: monospace !important;
-}
-#contactFormWrapper {
-    border-radius: 5px;
-    padding: 20px;
-	width: 50%;
-	max-width: 50em;
-	margin: auto;
-	margin-right: 5%;
-	margin-top: 3%;
-	font-family: monospace !important;
-	float: right;
-}
-#contactWrapper {
-	background-color: lightgreen;
-	height: 100vh;
-	width: 100vw;
-}
-#contactLinks {
-	border-left: solid green;
-	border-top: solid green;
-	padding: 1.5%;
-	font-size: 2vw;
-	margin-left: 4%;
-	margin-top: 3%;
-	width: 30%;
-	float:left;
-}
-#contactTitle {
-	text-align: center;
-    box-sizing: border-box;
-	font-family: monospace;
-	resize: none;
-}
-#contactInfoWrapper {
-	margin-top: 3%;
-}
-.contactEmail {
-	margin-top: 5vh;
-}
-#meWrapper {
-	height: 100vh;
-	width: 100vw;
-	overflow-y: scroll;
-	background-color: lightgrey;
-}
-.accordion {
-    color: white;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 5vmin;
-    transition: 0.4s;
-	text-align: center;
-}
-
-.panel {
-    transition: 0.4s;
-	text-align: center;
-	font-size: 3vmin;
-	margin: auto;
-    padding: 18px 20%;
-    display: none;
-    background-color: white;
-}
-.panel p{
-	margin: 0;
-	color: white;
-}
-#development {
-	background-color: #00BFFF;
-}
-#development:hover {
-	background-color: #00ace6;
-}
-#panDev {
-	background-color: #00BFFF;
-}
-#professional {
-	background-color: #ff4000;
-}
-#professional:hover {
-	background-color: #e63a00;
-}
-#panPro {
-	background-color: #ff4000;
-}
-#personal {
-	background-color: #81ee18;
-}
-#personal:hover {
-	background-color: #6fd510;
-}
-#panPer {
-	background-color: #81ee18;
 }
