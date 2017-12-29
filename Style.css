@@ -78,8 +78,18 @@ html, body {
     text-decoration: none;
 	border-right: groove;
 }
+.Navi li a:link {
+	color: black;
+	text-decoration: none;
+}
+.Navi li a:visited {
+    text-decoration: none;
+	color: black;
+}
 .Navi li a:hover {
 	color: grey;
+}
+.Navi li a:active {
 }
 .indexWrapper {
 	width: 100vw;
@@ -118,30 +128,43 @@ html, body {
 }
 #CSharp {
 	width: 80%;
-	height: 80%;
 	margin: auto;
 	margin-top: 15vh;
 	background-color: white;
 	border: solid #e39e1c;
 	border-width: 20px;
+	animation: grow .4s;
 }
 #Java {
 	width: 80%;
-	height: 80%;
 	margin: auto;
 	margin-top: 15vh;
 	background-color: white;
 	border: solid #2d7ddc;
 	border-width: 20px;
+	animation: grow .4s;
 }
 #HTMLCSS {
 	width: 80%;
-	height: 80%;
 	margin: auto;
 	margin-top: 15vh;
 	background-color: white;
 	border: solid #c1440e;
 	border-width: 20px;
+	animation: grow .4s;
+}
+#slideContainer {
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	margin: auto;
+	bottom: 0;
+	padding: 2vmin;
+	background: white;
+}
+#accordionWrapper {
+	padding-bottom: 6vmin;
+	font-size: 2vmin;
 }
 .subdivText {
 	width: 70%;
@@ -229,15 +252,6 @@ input[type=text], select, textarea {
 	margin: auto;
 	font-family: monospace !important;
 }
-#contactFormWrapper {
-    border-radius: 5px;
-    padding: 20px;
-	width: 50%;
-	max-width: 50em;
-	margin: auto;
-	font-family: monospace !important;
-	float: right;
-}
 #contactWrapper {
 	background-color: #baed91;
 	height: 100vh;
@@ -246,12 +260,22 @@ input[type=text], select, textarea {
 #contactLinks {
 	border-left: solid green;
 	border-top: solid green;
+	border-right: solid green;
 	padding: 1.5%;
 	font-size: 2vw;
-	width: 40%;
-	float:left;
+	width: 60%;
+	margin: auto;
 	color: grey;
 	font-weight: 900;
+}
+#contactFormWrapper {
+    border-radius: 5px;
+    padding: 20px;
+	width: 50%;
+	max-width: 50em;
+	margin: auto;
+	font-family: monospace !important;
+	float: right;
 }
 #contactLinks a:link {
 	color: darkgrey;
@@ -314,16 +338,11 @@ input[type=text], select, textarea {
 	color: white;
 }
 @keyframes grow {
-  0% {
-    display: none;
-    height: 0%;
+  from {
+    transform: scale(0);
   }
-  1% {
-    display: block;
-    height: 1%;
-  }
-  100% {
-    height: auto;
+  to {
+    transform: scale(1);
   }
 }
 #dev {
@@ -708,5 +727,41 @@ input[type=text], select, textarea {
 		transform: rotate(360deg)
 		           translate(40vmin) 
 		           rotate(-360deg);
+	}
+}
+@media only screen and (max-width: 600px) {
+	
+	#contactLinks {
+		font-size: 5vw;
+		border: none;
+		width: 80%;
+	}
+	.Navi li a {
+		font-size: 2vw;
+		padding: 3px 8px;
+	}
+	.arrow {
+		border-width: 0 1.5vmin 1.5vmin 0;
+		height: 1.2vmin;
+		width: 1.2vmin;
+		padding: 1vmin;
+		display: inline-block;
+		margin-left: 1.2vmin;
+		margin-top: 1.2vmin;
+	}
+	.arrow:hover {
+		border-width: 0 1.5vmin 1.5vmin 0;
+		height: 1.2vmin;
+		width: 1.2vmin;
+		padding: 1vmin;
+		display: inline-block;
+		margin-left: 1.2vmin;
+		margin-top: 1.2vmin;
+	}
+	.siteTitle {
+		letter-spacing: .15vw;
+	}
+	body {
+		letter-spacing: 0;
 	}
 }

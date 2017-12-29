@@ -1,20 +1,21 @@
-function showPopup(planetName, planet) {
-	document.getElementById(planetName.id).style.animationPlayState = "paused";
+function showPopup(planetArea, planet) {
+	document.getElementById(planetArea.id).style.animationPlayState = "paused";
 	var planet = document.getElementById(planet.id);
 	var popup = planet.getElementsByClassName("Popup")[0];
 	popup.style.visibility = "visible";
-	setPopupPos(planetName, planet);
+	setPopupPos(planetArea, planet);
 }
-function hidePopup(planetName, planet) {
-	document.getElementById(planetName.id).style.animationPlayState = "running";
+function hidePopup(planetArea, planet) {
+	document.getElementById(planetArea.id).style.animationPlayState = "running";
 	var popup = document.getElementById(planet.id).getElementsByClassName("Popup")[0];
 	popup.style.visibility = "hidden";
 }
-function setPopupPos(planetName, planet) {
+function setPopupPos(planetArea, planet) {
 	var planet = document.getElementById(planet.id);
 	var popup = planet.getElementsByClassName("Popup")[0];
-	if (popup.clientWidth < planet.clientWidth) {
-		popup.style.width = planet.clientWidth + "px";
+	if (popup.clientWidth <= planet.clientWidth) {
+		var width = planet.clientWidth - 3;
+		popup.style.width = width + "px";
 	}
 	else
 	{
@@ -51,4 +52,18 @@ for (i = 0; i < acc.length; i++) {
 	  panel.style.padding = "18px 12%";
     } 
   });
+}
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none"; 
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1} 
+    x[slideIndex-1].style.display = "block"; 
+    setTimeout(carousel, 5000); // Change image every 5 seconds
 }

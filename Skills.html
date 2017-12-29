@@ -6,8 +6,9 @@
 <script type="text/javascript" src="script.js">
 </script>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width" />
 </head>
-<body>
+<body onresize="setPopupPos(mercuryArea, mercury);setPopupPos(earthContainer, earth);setPopupPos(marsArea, mars);" onload="setPopupPos(mercuryArea, mercury);setPopupPos(earthContainer, earth);setPopupPos(marsArea, mars);">
 	<header class="headerWrapper">
 	<a href="Index.html" class="siteTitle" id="skillsTitle">
 	<strong>Jacob Hawks</strong>
@@ -17,20 +18,20 @@
 			<li><a id="lastNav" href="Contact.html">Contact</a></li>
 			<li><a href="AboutMe.html">About Me</a></li>
 			<li><a href="Skills.html">Skills</a></li>
-			<li><a href="Index.html">Home</a></li>
+			<li><a href="index.html">Home</a></li>
 		</ul>
 	</nav>
 	</header>
 	<div class="stars">
-	<div id="SkillsIndex" onresize="setPopupPos(mercuryArea, mercury);setPopupPos(earthContainer, earth);setPopupPos(marsArea, mars);" onload="setPopupPos(mercuryArea, mercury);setPopupPos(earthContainer, earth);setPopupPos(marsArea, mars);" >
+	<div id="SkillsIndex">
 	
 	<div id="sun" class="center">
-		<div onmouseover="growPlanet(mercury);" onmouseleave="shrinkPlanet(mercury);" id="mercuryArea" class="center">
+		<div onmouseover="growPlanet(mercury);" onmouseleave="shrinkPlanet(mercury);" id="mercuryArea" class="center planet">
 			<div id="mercury" class="center" onclick="changeDiv(SkillsIndex, CSharp)">
 				<p class="Popup centerPlanets">C#</p>
 			</div>
 		</div>
-		<div id="earthContainer" class="center">
+		<div id="earthContainer" class="center planet">
 			<div onmouseover="growPlanet(earth);" onmouseleave="shrinkPlanet(earth);" id="earthArea" class="center">
 				<div id="earth" class="center" onclick="changeDiv(SkillsIndex, Java)">
 					<p class="Popup centerPlanets">Java</p>
@@ -40,7 +41,7 @@
 				<div class="center" id="moon"></div>
 			</div>
 		</div>
-		<div onmouseover="growPlanet(mars);" onmouseleave="shrinkPlanet(mars);" id="marsArea" class="center">
+		<div onmouseover="growPlanet(mars);" onmouseleave="shrinkPlanet(mars);" id="marsArea" class="center planet">
 			<div id="mars" class="center" onclick="changeDiv(SkillsIndex, HTMLCSS)">
 				<p class="Popup">HTML & CSS</p>
 			</div>
@@ -57,38 +58,24 @@
 	</div>
 	
 	<div id="CSharp" style="display: none">
-	<div class="subdivWrapper">
-	<div class="subdivForeground">
 	<div class="arrow" onclick="changeDiv(CSharp, SkillsIndex)"></div>
 	<p class="subdivText">
 	<img id="csharpPic" src="C_Sharp_wordmark.svg.png" alt="C#">
 	I know the ins and outs of C# and have built many applications with it. I am able to take a program from the drawing board to an executable.</p> 
 	</div>
-	</div>
-	</div>
 	
 	<div id="Java" style="display: none">
-	<div class="subdivWrapper">
-	<div class="subdivForeground">
 	<div class="arrow" onclick="changeDiv(Java, SkillsIndex)"></div>
 	<p class="subdivText">
 	<img id="javaPic" src="Java_programming_language_logo.svg.png" alt="Java">
 	I decided to learn Java because with the Java Virtual Machine, I am able to build programs for many environments.</p>
 	</div>
-	</div>
-	</div>
 	
 	<div id="HTMLCSS" style="display: none">
-	<div class="subdivWrapper">
-	<div class="subdivForeground">
 	<div class="arrow" onclick="changeDiv(HTMLCSS, SkillsIndex)"></div>
 	<p class="subdivText">
 	<img id="htmlPic" src="CSS3_and_HTML5_badges.svg_.png" alt="HTML $ CSS">
 	HTML & CSS are the bases of web design. Having a strong knowledge of these languages has helped me make clean and dynamic websites.</p>
 	</div>
-	</div>
-	</div>
-	
 </body>
-
 </html>
