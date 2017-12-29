@@ -32,15 +32,21 @@ html, body {
 #skills li a:hover {
 	background-color: green;
 }
-#headerWrapper {
+.headerWrapper {
     padding: 7px 0;
 	padding-left: 1.5vw;
 	width: 96vw;
+	position: sticky;
+	top: -1px;
+	width: 100%;
+}
+#meHeader {
+	background: rgba(211, 211, 211, .8);
 }
 .siteTitle {
 	text-decoration: none;
     list-style-type: none;
-    padding: 7px 16px;
+    padding: 0 16px;
 	position: absolute;
 	z-index:1;
 	font-size: 3vmin;
@@ -56,7 +62,7 @@ html, body {
     list-style-type: none;
     margin: 0;
     padding: 0;
-	padding-right: 10px;
+	padding-right: 4%;
     overflow: hidden;
 }
 .Navi li {
@@ -100,7 +106,7 @@ html, body {
 .borderTop {
 	border-top: groove;
 	width: 90vmin;
-	font-family: Arial Black;
+	font-family: 'Roboto', sans-serif;
 	color: lightgray;
 }
 #jacob {
@@ -115,38 +121,32 @@ html, body {
 	height: 80%;
 	margin: auto;
 	margin-top: 15vh;
-	background-color: #e39e1c;
+	background-color: white;
+	border: solid #e39e1c;
+	border-width: 20px;
 }
 #Java {
 	width: 80%;
 	height: 80%;
 	margin: auto;
 	margin-top: 15vh;
-	background-color: #2d7ddc;
+	background-color: white;
+	border: solid #2d7ddc;
+	border-width: 20px;
 }
 #HTMLCSS {
 	width: 80%;
 	height: 80%;
 	margin: auto;
 	margin-top: 15vh;
-	background-color: #c1440e;
-}
-.subdivWrapper {
-	width: 100%;
-	height: 100%;
-	padding: 2% 0%;
-}
-.subdivForeground {
-	height: 96%;
-	width: 96%;
-	margin: auto;
 	background-color: white;
+	border: solid #c1440e;
+	border-width: 20px;
 }
 .subdivText {
 	width: 70%;
 	margin: auto;
-	margin-top: 0%;
-	margin-bottom: 10%;
+	margin-bottom: 6%;
 	font-size: 3vmin;
 }
 .arrow {
@@ -179,17 +179,20 @@ html, body {
 	width: 15vmin;
 	height: 12vmin;
 	padding-left: 10px;
+	float: right;
 }
 #javaPic {
 	width: 12vmin;
 	height: 20vmin;
 	background-color: white;
 	padding-left: 10px;
+	float: right;
 }
 #csharpPic {
 	width: 18vmin;
 	height: 12vmin;
 	padding-left: 10px;
+	float: right;
 }
 input[type=text], select, textarea {
     width: 100%;
@@ -236,7 +239,7 @@ input[type=text], select, textarea {
 	float: right;
 }
 #contactWrapper {
-	background-color: lightgreen;
+	background-color: #baed91;
 	height: 100vh;
 	width: 100vw;
 }
@@ -247,6 +250,22 @@ input[type=text], select, textarea {
 	font-size: 2vw;
 	width: 40%;
 	float:left;
+	color: grey;
+	font-weight: 900;
+}
+#contactLinks a:link {
+	color: darkgrey;
+	text-decoration: none;
+}
+#contactLinks a:visited {
+    text-decoration: none;
+	color: darkgrey;
+}
+#contactLinks a:hover {
+	text-decoration: underline;
+}
+#contactLinks a:active {
+    text-decoration: underline;
 }
 #contactTitle {
 	text-align: center;
@@ -267,7 +286,7 @@ input[type=text], select, textarea {
 	overflow-y: scroll;
 	background-color: lightgray;
 }
-.accordion {
+.accordion #dev,#pro,#per{
     color: white;
     cursor: pointer;
     padding: 18px;
@@ -279,46 +298,69 @@ input[type=text], select, textarea {
     transition: 0.4s;
 	text-align: center;
 }
-
 .panel {
     transition: 0.4s;
 	text-align: center;
 	font-size: 3vmin;
 	margin: auto;
-    padding: 18px 20%;
-    display: none;
+    padding: 0 12%;
     background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
 }
 .panel p{
 	margin: 0;
 	color: white;
 }
-#development {
-	background-color: #00ace6;
+@keyframes grow {
+  0% {
+    display: none;
+    height: 0%;
+  }
+  1% {
+    display: block;
+    height: 1%;
+  }
+  100% {
+    height: auto;
+  }
 }
-#development:hover {
+#dev {
+	background-color: #b2cefe;
+}
+#dev:hover {
 	background-color: #009ace;
 }
 #panDev {
 	background-color: #00ace6;
 }
-#professional {
-	background-color: #ff4000;
+#pro {
+	background-color: #fea3aa;
 }
-#professional:hover {
-	background-color: #e63a00;
+#pro:hover {
+	background-color: #e24814;
 }
 #panPro {
-	background-color: #ff4000;
+	background-color: #ff5116;
 }
-#personal {
-	background-color: #6fd510;
+#per {
+	background-color: #baed91;
 }
-#personal:hover {
+#per:hover {
 	background-color: #67c60d;
 }
 #panPer {
 	background-color: #6fd510;
+}
+.active #dev {
+	background-color: #009ace !important;
+}
+.active #pro {
+	background-color: #e24814; !important;
+}
+.active #per {
+	background-color: #67c60d; !important;
 }
 #navSkills li a {
 	color: gray;
@@ -345,7 +387,6 @@ input[type=text], select, textarea {
   width:100%;
   height:100%;
   animation: slideStars 2000s linear infinite;
-  
   background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
   z-index: -1;
 }
@@ -361,7 +402,6 @@ input[type=text], select, textarea {
 	left:0;
 	right:0;
 }
-
 .Popup {
 	background-color: white;
 	padding: 5%;
@@ -440,9 +480,10 @@ input[type=text], select, textarea {
 	visibility: visible !important;
 }
 #moonArea {
+	will-change: transform;
     border-radius : 100%;
-    height : 2.5vmin;
-    width : 2.5vmin;
+    height : 2.6vmin;
+    width : 2.6vmin;
 	position: absolute;
 	animation: rotMoon 5s linear infinite;
 }
@@ -459,6 +500,23 @@ input[type=text], select, textarea {
 #moonArea:hover #moon{
 	transform: scale(1.5);
 	transition-duration: 100ms;
+}
+.steel {
+	-webkit-transform: translate3d(0,0,0);
+	-moz-transform: translate3d(0,0,0);
+	-ms-transform: translate3d(0,0,0);
+	-o-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+	
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	backface-visibility: hidden;
+
+	-webkit-perspective: 1000;
+	-moz-perspective: 1000;
+	-ms-perspective: 1000;
+	perspective: 1000;
 }
 @keyframes rotMercury {
 	from {
@@ -571,36 +629,36 @@ input[type=text], select, textarea {
 @-webkit-keyframes rotMoon {
   from {
 		transform: rotate(0deg)
-		           translate(30vmin)
+		           translate(4vmin)
 		           rotate(0deg);
 	}
 	to {
 		transform: rotate(360deg)
-		           translate(30vmin) 
+		           translate(4vmin) 
 		           rotate(-360deg);
 	}
 }
 @-moz-keyframes rotMoon {
   from {
 		transform: rotate(0deg)
-		           translate(30vmin)
+		           translate(4vmin)
 		           rotate(0deg);
 	}
 	to {
 		transform: rotate(360deg)
-		           translate(30vmin) 
+		           translate(4vmin) 
 		           rotate(-360deg);
 	}
 }
 @-o-keyframes rotMoon {
   from {
 		transform: rotate(0deg)
-		           translate(30vmin)
+		           translate(4vmin)
 		           rotate(0deg);
 	}
 	to {
 		transform: rotate(360deg)
-		           translate(30vmin) 
+		           translate(4vmin) 
 		           rotate(-360deg);
 	}
 }
