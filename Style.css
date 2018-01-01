@@ -1,9 +1,10 @@
 html, body {
 	font-family: "Courier New";
 	-webkit-font-smoothing: antialiased;
-	overflow: hidden;
 	margin: 0%;
 	letter-spacing: .15vw;
+	overflow-y: auto;
+	overflow-x: hidden;
 }
 #skills ul {
 	position: fixed;
@@ -35,7 +36,6 @@ html, body {
 .headerWrapper {
     padding: 7px 0;
 	padding-left: 1.5vw;
-	width: 96vw;
 	position: sticky;
 	top: -1px;
 	width: 100%;
@@ -102,7 +102,7 @@ html, body {
 }
 #name {
 	margin: auto;
-	margin-top: 28vh;
+	margin-top: 36vh;
 	text-align: center;
 	font-size: 7vmin;
 }
@@ -154,17 +154,44 @@ html, body {
 	animation: grow .4s;
 }
 #slideContainer {
-	position: absolute;
+	position: fixed;
 	text-align: center;
 	width: 100%;
-	margin: auto;
 	bottom: 0;
 	padding: 2vmin;
-	background: white;
+	font-size: 4vmin;
+	background: lightblue;
+	max-height: 7vmin;
 }
-#accordionWrapper {
-	padding-bottom: 6vmin;
-	font-size: 2vmin;
+.mySlides {
+	text-align: center;
+	overflow: hidden;
+	animation: slideIn 1s, slideOut 1s;
+	animation-delay: 0s, 4s;
+}
+
+@keyframes slideIn {
+  from {
+    margin-left: 100%;
+    width: 300%; 
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+@keyframes slideOut {
+  from {
+    margin-left: 0%;
+	width: 100%;
+  }
+
+  to {
+    
+    margin-left: 100%;
+    width: 300%; 
+  }
 }
 .subdivText {
 	width: 70%;
@@ -305,10 +332,9 @@ input[type=text], select, textarea {
 	margin-top: 4%;
 }
 #meWrapper {
-	height: 100vh;
-	width: 100vw;
 	overflow-y: scroll;
 	background-color: lightgray;
+	font-size: 2vmin;
 }
 .accordion #dev,#pro,#per{
     color: white;
@@ -736,9 +762,26 @@ input[type=text], select, textarea {
 		border: none;
 		width: 80%;
 	}
+	.Navi ul {
+		width: 100%;
+		list-style-type: none;
+		overflow: hidden;
+		display: block;
+		padding: 0;
+	}
+	.Navi li {
+		float: right;
+	}
 	.Navi li a {
-		font-size: 2vw;
-		padding: 3px 8px;
+		font-size: 4.5vw;
+ 		color: black;
+		text-align: center;
+		text-decoration: none;
+		border-right: groove;
+		margin: auto;
+		width: 24vw;
+		padding-left: 0;
+		padding-right: 0;
 	}
 	.arrow {
 		border-width: 0 1.5vmin 1.5vmin 0;
@@ -759,9 +802,22 @@ input[type=text], select, textarea {
 		margin-top: 1.2vmin;
 	}
 	.siteTitle {
-		letter-spacing: .15vw;
+		display: none;
+		position: absolute;
+	}
+	.headerWrapper {
+		padding: 0;
+		position: relative;
+		width: 100%;
 	}
 	body {
 		letter-spacing: 0;
+	}
+	#meWrapper {
+		height: 100%;
+		margin-bottom: 7vmin;
+	}
+	.panel p {
+		font-size: 4vmin;
 	}
 }
